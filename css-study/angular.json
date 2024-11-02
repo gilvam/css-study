@@ -28,8 +28,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                "output": "app"
+                "input": "public"
               }
             ],
             "styles": [
