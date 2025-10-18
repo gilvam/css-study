@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: darkseagreen;
+  //background: lightskyblue;
+  //background: steelblue;
+
+  span {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+}

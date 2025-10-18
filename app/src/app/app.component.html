@@ -1,1 +1,9 @@
-<app-shrouded-card-list />
+<nav>
+  <a routerLink="/" routerLinkActive="active" #rlaHome="routerLinkActive" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a routerLink="/hide-letters" routerLinkActive="active" #rlaList="routerLinkActive">Hide letters</a>
+  <a routerLink="/shrouded-card-list" routerLinkActive="active" #rlaList="routerLinkActive">Shrouded Card List</a>
+</nav>
+
+<hr />
+
+<router-outlet></router-outlet>
