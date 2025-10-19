@@ -1,5 +1,5 @@
-<div>
-  @for (item of nameList; track item; let i = $index) {
-    <span>{{ item }}</span>
+<div appActualWidth [offset]="10">
+  @for (item of nameList; track item) {
+    <span appActualWidth>{{ item }}</span>
   }
 </div>

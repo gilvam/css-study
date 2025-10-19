@@ -8,8 +8,6 @@
   animation: colorChange 1.5s ease-out 1.5s forwards;
 
   @keyframes colorChange {
-    0% {
-    }
     100% {
       background-color: lightskyblue;
     }
@@ -18,7 +16,6 @@
   div {
     display: flex;
     justify-content: center;
-    width: 186px;
 
     span {
       display: inline-block;
@@ -29,10 +26,9 @@
       opacity: 1;
 
       &:not(:first-child):not(:last-child) {
-        width: 101px;
-        animation: frameEnd 1.5s ease-out 1.5s forwards;
+        animation: frameHidden 1s ease-out 1.5s forwards;
 
-        @keyframes frameEnd {
+        @keyframes frameHidden {
           100% {
             width: 0;
           }
@@ -40,8 +36,8 @@
       }
 
       &:last-child {
-        animation: frameSpaceInit 0.5s ease-in 1s forwards,
-        frameSpaceEnd 2s ease-out 2s forwards ;
+        animation: frameSpaceInit 0.5s ease 1s forwards,
+        frameSpaceEnd 1.5s ease-out 2s forwards;
 
         @keyframes frameSpaceInit {
           100% {
