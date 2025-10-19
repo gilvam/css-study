@@ -5,11 +5,32 @@
   height: 100vh;
   width: 100%;
   background: darkseagreen;
-  //background: lightskyblue;
-  //background: steelblue;
 
   span {
+    display: inline-block;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 1;
+
+    &:not(:first-child):not(:last-child) {
+      background: red;
+      animation: hideWidth 2s ease-in-out 1s forwards;
+    }
+  }
+
+  @keyframes hideWidth {
+    0% {
+      width: 100%;
+    }
+    20% {
+      width: 120%;
+    }
+    100% {
+      width: 0;
+      padding: 0;
+      opacity: 0;
+    }
   }
 }
