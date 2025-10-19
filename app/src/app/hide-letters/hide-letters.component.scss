@@ -5,13 +5,20 @@
   height: 100vh;
   width: 100%;
   background: darkseagreen;
+  animation: colorChange 1.5s ease-out 1.5s forwards;
 
+  @keyframes colorChange {
+    0% {
+    }
+    100% {
+      background-color: lightskyblue;
+    }
+  }
 
   div {
     display: flex;
     justify-content: center;
     width: 186px;
-    background: steelblue;
 
     span {
       display: inline-block;
@@ -23,26 +30,31 @@
 
       &:not(:first-child):not(:last-child) {
         width: 101px;
-        animation: frameInit 0.5s ease-in 1s forwards, frameEnd 1.5s ease-out 1.5s forwards;
+        animation: frameEnd 1.5s ease-out 1.5s forwards;
+
+        @keyframes frameEnd {
+          100% {
+            width: 0;
+          }
+        }
       }
-    }
-  }
 
+      &:last-child {
+        animation: frameSpaceInit 0.5s ease-in 1s forwards,
+        frameSpaceEnd 2s ease-out 2s forwards ;
 
-  @keyframes frameInit {
-    0% {
-    }
-    100% {
-      width: calc(101px + 3%);
-    }
-  }
+        @keyframes frameSpaceInit {
+          100% {
+            padding-left: 10px;
+          }
+        }
 
-  @keyframes frameEnd {
-    0% {
-    }
-    100% {
-      width: 0;
-      padding: 0;
+        @keyframes frameSpaceEnd {
+          100% {
+            padding-left: 0;
+          }
+        }
+      }
     }
   }
 }
