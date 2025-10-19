@@ -6,31 +6,43 @@
   width: 100%;
   background: darkseagreen;
 
-  span {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    opacity: 1;
 
-    &:not(:first-child):not(:last-child) {
-      background: red;
-      animation: hideWidth 2s ease-in-out 1s forwards;
+  div {
+    display: flex;
+    justify-content: center;
+    width: 186px;
+    background: steelblue;
+
+    span {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      opacity: 1;
+
+      &:not(:first-child):not(:last-child) {
+        width: 101px;
+        animation: frameInit 0.5s ease-in 1s forwards, frameEnd 1.5s ease-out 1.5s forwards;
+      }
     }
   }
 
-  @keyframes hideWidth {
+
+  @keyframes frameInit {
     0% {
-      width: 100%;
     }
-    20% {
-      width: 120%;
+    100% {
+      width: calc(101px + 3%);
+    }
+  }
+
+  @keyframes frameEnd {
+    0% {
     }
     100% {
       width: 0;
       padding: 0;
-      opacity: 0;
     }
   }
 }
