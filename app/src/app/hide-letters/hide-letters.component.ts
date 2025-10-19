@@ -11,5 +11,5 @@ import { ActualWidthDirective } from './directives/actual-width.directive';
   styleUrl: './hide-letters.component.scss'
 })
 export class HideLettersComponent {
-  nameList = ['Emp', 'resa', 's']
+  nameList = ['Util', 'izadore', 's']
 }
